@@ -1,0 +1,25 @@
+.button_view_no-background
+  background none
+
+  &:focus
+    background-color --color-hover-primary
+    @media (hover: none)
+      background none
+    @supports (selector:focus-visible)
+      background none
+
+  &:hover:not(:focus)
+    background-color --background-color-primary
+    @media (hover: none)
+      background none
+    @supports (selector:focus-visible)
+      background none
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      background-color --color-hover-primary
+
+  &:hover:not(:focus-visible)
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        background-color --background-color-primary

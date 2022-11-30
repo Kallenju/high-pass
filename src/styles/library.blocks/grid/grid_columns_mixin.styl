@@ -1,0 +1,6 @@
+grid_columns_mixin(n, breakpoint)
+  if breakpoint
+    @media screen and (max-width: breakpoint)
+      grid-template-columns repeat(n, 1fr)
+  else
+    grid-template-columns repeat(n, 1fr)

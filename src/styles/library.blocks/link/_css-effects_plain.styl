@@ -1,0 +1,26 @@
+.link
+  &:hover:not(:focus)
+    color --color-hover-primary
+  @media (hover: none)
+    color --text-color-primary
+  @supports (selector:focus-visible)
+    color --text-color-primary
+
+  &:active
+    outline none
+    color --color-active-primary
+    transition color --transition-time_fast ease-out
+    @supports (selector:focus-visible)
+      outline none
+      color --text-color-primary
+
+  &:hover:not(:focus-visible)
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        color --color-hover-primary
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      outline none
+      color --color-primary-active
+      transition color --transition-time_fast ease-out

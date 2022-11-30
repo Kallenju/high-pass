@@ -1,0 +1,31 @@
+.burger__body
+  position absolute
+  z-index 1500
+  top 0
+  left 0
+  display flex
+  flex-direction column
+  justify-content space-between
+  align-items flex-start
+  opacity 1.00
+  padding 16.20rem 0 1.50rem --container-margins
+  width 50%
+  max-height 100vh
+  background-color --color-white
+  box-shadow 0 5px 40px rgba(0, 0, 0, 0.1)
+  opacity 1.00
+  visibility visible
+  transform none
+  transition visibility --transition-time_slow ease-out, padding --transition-time_slow ease-out, width --transition-time_slow ease-out, height --transition-time_slow ease-out, opacity --transition-time_fast ease-out, transform --transition-time_slow ease-out
+
+  & > *:last-child
+    margin-bottom 0
+
+.burger__body_hidden
+  &.burger__body
+    visibility hidden
+    padding-right 0
+    padding-left 0
+    width 0
+    opacity 0
+    transition visibility --transition-time_slow ease-in, padding --transition-time_slow ease-in, width --transition-time_slow ease-in, height --transition-time_slow ease-in, opacity --transition-time_slow ease-in, transform --transition-time_slow ease-in

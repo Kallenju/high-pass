@@ -1,0 +1,6 @@
+grid__item_span_mixin(n, breakpoint)
+  if breakpoint
+    @media screen and (max-width: breakpoint)
+      grid-column: span n;
+  else
+    grid-column: span n;

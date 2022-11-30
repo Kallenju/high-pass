@@ -1,0 +1,18 @@
+.logo
+  display inline-block
+  font-size 0
+  transition margin --transition-time_slow linear, width --transition-time_slow linear, height --transition-time_slow linear
+  cursor pointer
+  @media (hover: none)
+    cursor none
+
+  &:focus
+    outline 1px solid --color-hover-primary
+    @media (hover: none)
+      outline none
+    @supports (selector:focus-visible)
+      outline none
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      outline 1px solid --color-hover-primary

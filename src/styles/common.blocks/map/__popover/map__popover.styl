@@ -1,0 +1,19 @@
+.map__popover
+  position absolute
+  z-index 500
+  bottom 0
+  left 0
+  width 48.5%
+  height calc(100% - 0.60rem)
+  opacity 1.00
+  visibility visible
+  transition visibility --transition-time_slow ease-out, width --transition-time_slow ease-out, height --transition-time_slow ease-out, opacity --transition-time_fast ease-out, transform --transition-time_slow ease-out
+  @media screen and (max-width --breakpoint_md)
+    width 100%
+    height auto
+
+.map__popover_hidden
+  &.map__popover
+    visibility hidden
+    opacity 0
+    transition visibility --transition-time_slow ease-out, width --transition-time_slow ease-out, height --transition-time_slow ease-out, opacity --transition-time_slow ease-out, transform --transition-time_slow ease-out

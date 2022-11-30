@@ -1,0 +1,20 @@
+.custom-checkbox__checkmark
+  position relative
+  flex-shrink 0
+  width 1.50rem
+  height 1.50rem
+  border 1px solid --color-light-grey
+  border-radius 0.30rem
+  transition border --transition-time_slow linear, width --transition-time_slow linear, height --transition-time_slow linear
+
+  &::after
+    content ''
+    position absolute
+    display block
+    top -0.10rem
+    left -0.10rem
+    width 1.50rem
+    height 1.50rem
+    background url('../images/checkmark.svg') top 0.20rem left 0.15rem / 1.10rem 0.90rem no-repeat
+    opacity 0
+    transition opacity --transition-time_slow linear

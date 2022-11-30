@@ -1,0 +1,44 @@
+.socials__icon-path
+  fill #cacaca
+
+.socials__icon
+  &:hover:not(:focus)
+    .socials__icon-path
+      fill --color-focus-primary
+      @media (hover: none)
+        fill #cacaca
+      @supports (selector:focus-visible)
+        fill #cacaca
+
+  &:active
+    .socials__icon-path
+      fill --color-active-primary
+      @supports (selector:focus-visible)
+        fill #cacaca
+
+  &:hover:not(:focus-visible)
+    .socials__icon-path
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+            fill --color-focus-primary
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      .socials__icon-path
+        fill --color-active-primary
+
+.socials__icon_activejs
+  .socials__icon-path
+    fill --color-active-primary
+
+  &:hover:not(:focus)
+    .socials__icon-path
+      fill --color-active-primary
+      @media (hover: none)
+        fill #cacaca
+      @supports (selector:focus-visible)
+        fill #cacaca
+
+  &:hover:not(:focus-visible)
+    .socials__icon-path
+      fill --color-active-primary

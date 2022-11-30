@@ -1,0 +1,15 @@
+.burger__nav-link
+  --burger__nav-link-before-width 100%
+  font-family --font-family-secondary, sans-serif
+  font-size --font-size_sm
+  font-weight --font-weight_xs
+  line-height --line-height_md
+  color --text-color-primary
+
+  &::before
+    content ''
+    position absolute
+    top 0
+    left 0
+    width var(--burger__nav-link-before-width)
+    height 100%

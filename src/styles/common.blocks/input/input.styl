@@ -1,0 +1,77 @@
+.input
+  padding 1.50rem 2.30rem
+  height 5.00rem
+  outline none
+  line-height --line-height_xs
+  font-style normal
+  color --text-color-secondary
+  caret-color --text-color-secondary
+  background-color --color-light-grey
+  @media screen and (max-width --breakpoint_xs)
+    padding 1.20rem 2.30rem
+    height 4.00rem
+    font-size --font-size_xs
+
+  &::-moz-placeholder
+    line-height --line-height_xs
+    color --color-middle-grey
+    @media screen and (max-width --breakpoint_xs)
+      font-size --font-size_xs
+
+  &::placeholder
+    line-height --line-height_xs
+    color --color-middle-grey
+    @media screen and (max-width --breakpoint_xs)
+      font-size --font-size_xs
+
+  &:focus
+    outline 1px solid --color-focus-primary
+    background-color --color-light-grey
+    @media (hover: none)
+      outline none
+      background-color --color-light-grey
+    @supports (selector:focus-visible)
+      outline none
+      background-color --color-light-grey
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      outline 1px solid --color-focus-primary
+      background-color --color-light-grey
+
+  &:hover
+    outline none
+    background-color --color-light-grey
+    @media (hover: none)
+      outline none
+      background-color --color-light-grey
+    &::-moz-placeholder
+      color --color-hover-primary
+      @media (hover: none)
+        color --color-middle-grey
+    &::placeholder
+      color --color-hover-primary
+      @media (hover: none)
+        color --color-middle-grey
+
+  &:not(:placeholder-shown)
+    outline none
+    color --text-color-secondary
+    caret-color --text-color-secondary
+    background-color --color-light-grey
+    transition color --transition-time_fast ease-out, caret-color --transition-time_fast ease-out, background-color --transition-time_fast ease-out
+
+  &:active
+    outline none
+    color --text-color-secondary
+    caret-color --text-color-secondary
+    background-color --color-light-grey
+    transition color --transition-time_fast ease-out, caret-color --transition-time_fast ease-out, background-color --transition-time_fast ease-out
+    &::-moz-placeholder
+      color --text-color-secondary
+      @media (hover: none)
+        color --text-color-secondary
+    &::placeholder
+      color --text-color-secondary
+      @media (hover: none)
+        color --text-color-secondary

@@ -1,0 +1,50 @@
+.icon__path
+  fill --text-color-primary
+  transition fill --transition-time_slow linear
+
+.icon
+  &:hover:not(:focus)
+    .icon__path
+      fill --color-hover-primary
+      @media (hover: none)
+        fill --text-color-primary
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+
+  &:active
+    .icon__path
+      fill --color-active-primary
+      transition fill --transition-time_fast ease-out
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+
+  &:hover:not(:focus-visible)
+    .icon__path
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+            fill --color-hover-primary
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      .icon__path
+        fill --color-active-primary
+        transition fill --transition-time_fast ease-out
+
+.icon_activejs
+  .icon__path
+    fill --color-active-primary
+    transition fill --transition-time_fast ease-out
+
+  &:hover:not(:focus)
+    .icon__path
+      fill --color-active-primary
+      transition fill --transition-time_fast ease-out
+      @media (hover: none)
+        fill --text-color-primary
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+
+  &:hover:not(:focus-visible)
+    .icon__path
+      fill --color-active-primary
+      transition fill --transition-time_fast ease-out

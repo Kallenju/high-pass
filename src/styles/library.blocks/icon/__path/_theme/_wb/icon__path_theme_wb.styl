@@ -1,0 +1,58 @@
+.icon__path_theme_wb
+  fill --color-white
+
+.icon
+  &:hover:not(:focus)
+    .icon__path_theme_wb
+      fill --color-white
+      fill-opacity 0.70
+      @media (hover: none)
+        fill --text-color-primary
+        fill-opacity 1.00
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+        fill-opacity 1.00
+
+  &:active
+    .icon__path_theme_wb
+      fill --color-white
+      fill-opacity 1.00
+      @supports (selector:focus-visible)
+        fill --color-white
+        fill-opacity 0.40
+
+  &:hover:not(:focus-visible)
+    .icon__path_theme_wb
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          fill --color-white
+          fill-opacity 0.7
+
+
+.icon_activejs
+  .icon__path_theme_wb
+    fill --color-white
+    fill-opacity 1.00
+
+  &:hover:not(:focus)
+    .icon__path_theme_wb
+      fill --color-white
+      fill-opacity 1.00
+      @media (hover: none)
+        fill --text-color-primary
+        fill-opacity 1.00
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+        fill-opacity 1.00
+
+  &:hover:not(:focus-visible)
+    .icon__path_theme_wb
+      @supports (selector:focus-visible)
+        fill --color-white
+        fill-opacity 1.00
+
+  &:active:not(:focus-visible)
+    .icon__path_theme_wb
+      @supports (selector:focus-visible)
+        fill --color-white
+        fill-opacity 1.00

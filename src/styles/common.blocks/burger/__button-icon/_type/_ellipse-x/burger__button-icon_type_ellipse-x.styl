@@ -1,0 +1,138 @@
+.burger__button-icon_type_ellipse-x
+  margin-bottom 0.60rem
+  width 2.00rem
+  height 0.20rem
+  background-color --color-white
+  transition width --transition-time_slow ease-out, background-color --transition-time_slow ease-out, transform --transition-time_slow ease-out, opacity --transition-time_slow ease-out
+
+  &:nth-child(1)
+    position absolute
+    top 0.20rem
+    left 0.20rem
+    margin-bottom 0
+    border-radius 50%
+    width 1.80rem
+    height 1.80rem
+    background-color #808080
+    opacity 0
+
+  &:nth-child(4)
+    width 1.00rem
+    margin-bottom 0
+
+.burger__button
+  &:hover:not(:focus)
+    .burger__button-icon_type_ellipse-x
+      background-color --color-focus-primary
+      @media (hover: none)
+        background-color --color-white
+      @supports (selector:focus-visible)
+        background-color --color-white
+        &:nth-child(1)
+          background-color #808080
+          @media (hover: none)
+            background-color #808080
+          @supports (selector:focus-visible)
+            background-color #808080
+
+  &:active
+    .burger__button-icon_type_ellipse-x
+      background-color --color-focus-primary
+      @supports (selector:focus-visible)
+        background-color --color-white
+      &:nth-child(1)
+        background-color #808080
+        @supports (selector:focus-visible)
+          background-color #808080
+
+  &:hover:not(:focus-visible)
+    .burger__button-icon_type_ellipse-x
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          background-color --color-focus-primary
+      &:nth-child(1)
+        @supports (selector:focus-visible)
+          @media (hover: hover)
+            background-color #808080
+
+  &:active:not(:focus-visible)
+    .burger__button-icon_type_ellipse-x
+      @supports (selector:focus-visible)
+        background-color --color-focus-primary
+      &:nth-child(1)
+        @supports (selector:focus-visible)
+          background-color #808080
+
+.burger__button_activejs
+  .burger__button-icon_type_ellipse-x
+    background-color --color-white
+
+  .burger__button-icon_type_ellipse-x:nth-child(1)
+    background-color #808080
+    opacity 1.00
+
+  .burger__button-icon_type_ellipse-x:nth-child(2)
+    width 1.00rem
+    height 0.10rem
+    transform translate(0.20rem, 0.30rem) rotate(45deg)
+    transform-origin center left
+
+  .burger__button-icon_type_ellipse-x:nth-child(3)
+    width 0
+    height 0
+
+  .burger__button-icon_type_ellipse-x:nth-child(4)
+    width 1.00rem
+    height 0.10rem
+    transform translate(0.15rem, -0.30rem) rotate(-45deg)
+    transform-origin center left
+
+.burger__button_activejs
+  &:hover:not(:focus)
+    .burger__button-icon_type_ellipse-x
+      background-color --color-dark-grey
+      @media (hover: none)
+        background-color --color-white
+      @supports (selector:focus-visible)
+        background-color --color-white
+        &:nth-child(1)
+          background-color --color-light-grey
+          @media (hover: none)
+            background-color #808080
+          @supports (selector:focus-visible)
+            background-color #808080
+
+  &:active
+    .burger__button-icon_type_ellipse-x
+      background-color --color-dark-grey
+      @supports (selector:focus-visible)
+        background-color --color-white
+      &:nth-child(1)
+        background-color --color-light-grey
+        @supports (selector:focus-visible)
+          background-color #808080
+
+  &:hover:not(:focus-visible)
+    .burger__button-icon_type_ellipse-x
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          background-color --color-dark-grey
+      &:nth-child(1)
+        @supports (selector:focus-visible)
+          @media (hover: hover)
+            background-color --color-light-grey
+
+  &:active:not(:focus-visible)
+    .burger__button-icon_type_ellipse-x
+      @supports (selector:focus-visible)
+        background-color --color-dark-grey
+      &:nth-child(1)
+        @supports (selector:focus-visible)
+          background-color --color-light-grey
+
+.burger__button
+  &.burger__button_activejs
+    justify-content center
+    align-items center
+    width 2.20rem
+    height 2.20rem

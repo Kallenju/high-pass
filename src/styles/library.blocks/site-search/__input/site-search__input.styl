@@ -1,0 +1,70 @@
+.site-search__input
+  margin-right 1.40rem
+  padding 0
+  border-bottom 1px solid #dcdcdc
+  width 41.20rem
+  height 2.80rem
+  font-family --font-family-primary, sans-serif
+  font-size --font-size_sm
+  font-weight --font-weight_xs
+  line-height --line-height_md
+  font-style normal
+  color --text-color-primary
+  caret-color --text-color-primary
+  background none
+  transition margin --transition-time_slow linear, padding --transition-time_slow linear, width --transition-time_slow linear, height --transition-time_slow linear, border-color --transition-time_slow linear
+
+  &::-moz-placeholder
+    font-family --font-family-primary, sans-serif
+    font-size --font-size_sm
+    font-weight --font-weight_xs
+    line-height --line-height_md
+    color #adadad
+    @media screen and (max-width --breakpoint_xs)
+      font-size --font-size_sm
+
+  &::placeholder
+    font-family --font-family-primary, sans-serif
+    font-size --font-size_sm
+    font-weight --font-weight_xs
+    line-height --line-height_md
+    color #adadad
+    @media screen and (max-width --breakpoint_xs)
+      font-size --font-size_sm
+
+  &:focus
+    background none
+    @media (hover: none)
+      background none
+    @supports (selector:focus-visible)
+      background none
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      background none
+
+  &:hover
+    background none
+    @media (hover: none)
+      background none
+
+   &:not(:placeholder-shown)
+    color --text-color-primary
+    caret-color --text-color-primary
+    background none
+    transition margin --transition-time_fast ease-out, padding --transition-time_fast ease-out, width --transition-time_fast ease-out, height --transition-time_fast ease-out, border-color --transition-time_fast ease-out
+
+  &:active
+    color --text-color-primary
+    caret-color --text-color-primary
+    background none
+    transition margin --transition-time_fast ease-out, padding --transition-time_fast ease-out, width --transition-time_fast ease-out, height --transition-time_fast ease-out, border-color --transition-time_fast ease-out
+    &::-moz-placeholder
+      color #adadad
+    &::placeholder
+      color #adadad
+
+.site-search__form_hidden
+  &.site-search__input
+    margin-right 0
+    width 0

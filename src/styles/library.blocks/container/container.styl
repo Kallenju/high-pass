@@ -1,0 +1,12 @@
+.container
+  margin 0 auto
+  padding 0 --container-margins
+  width 100%
+  max-width --container-width
+  transition padding --transition-time_slow linear, width --transition-time_slow linear
+  @media screen and (max-width: --breakpoint_md)
+    padding 0 --container-margins_md
+  @media screen and (max-width: --breakpoint_sm)
+    padding 0 --container-margins_sm
+  @media screen and (max-width: --breakpoint_xs)
+    padding 0 --container-margins_xs

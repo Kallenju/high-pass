@@ -1,0 +1,62 @@
+.link
+  &::after
+    content ''
+    position absolute
+    left 0
+    bottom 0
+    width 100%
+    height 2px
+    transform scaleX(0)
+    transition transform --transition-time_slow ease-in
+
+  &:hover:not(:focus)
+    outline none
+    @media (hover: none)
+      outline none
+    @supports (selector:focus-visible)
+      outline none
+
+  &:hover:not(:focus)::after
+    background-color --color-hover-primary
+    transform scaleX(1)
+    @media (hover: none)
+      transform scaleX(0)
+    @supports (selector:focus-visible)
+      transform scaleX(0)
+
+  &:active
+    outline none
+    color --color-active-primary
+    transition color --transition-time_fast ease-out
+    @supports (selector:focus-visible)
+      color --text-color-primary
+
+  &:active::after
+    background-color --color-active-primary
+    transform scaleX(1)
+    transition background-color --transition-time_fast ease-out, transform --transition-time_fast ease-out
+    @supports (selector:focus-visible)
+      transform scaleX(0)
+
+  &:hover:not(:focus-visible)
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        outline none
+
+  &:hover:not(:focus-visible)::after
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        background-color --color-hover-primary
+        transform scaleX(1)
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      outline none
+      color --color-active-primary
+      transition color --transition-time_fast ease-out
+
+  &:active:not(:focus-visible)::after
+    @supports (selector:focus-visible)
+      background-color --color-active-primary
+      transform scaleX(1)
+      transition background-color --transition-time_fast ease-out, transform --transition-time_fast ease-out

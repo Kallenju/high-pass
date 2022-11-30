@@ -1,0 +1,11 @@
+.tel-link
+  &:focus
+    background none
+    @media (hover: none)
+      background none
+    @supports (selector:focus-visible)
+      background none
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      background none

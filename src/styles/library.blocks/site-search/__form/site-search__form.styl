@@ -1,0 +1,20 @@
+.site-search__form
+  position absolute
+  z-index 1500
+  bottom -10.00rem
+  right 0
+  display flex
+  align-items center
+  padding 1.60rem 1.80rem 1.60rem 3.20rem
+  border-radius 1.60rem
+  background-color --color-white
+  box-shadow 0 0 20px rgba(0, 0, 0, 0.12)
+  opacity 1.00
+  visibility visible
+  transition margin --transition-time_slow ease-out, padding --transition-time_slow ease-out, width --transition-time_slow ease-out, height --transition-time_slow ease-out, right --transition-time_slow ease-out, bottom --transition-time_slow ease-out, opacity --transition-time_fast ease-out, visibility --transition-time_slow ease-out
+
+.site-search__form_hidden
+  &.site-search__form
+    visibility hidden
+    opacity 0
+    transition margin --transition-time_slow ease-in, padding --transition-time_slow ease-in, width --transition-time_slow ease-in, height --transition-time_slow ease-in, right --transition-time_slow ease-in, bottom --transition-time_slow ease-in, opacity --transition-time_slow ease-in, visibility --transition-time_slow ease-in

@@ -1,0 +1,35 @@
+.link
+  position relative
+  display inline-flex
+  justify-content center
+  align-items center
+  outline none
+  font-family --font-family-primary, sans-serif
+  font-size --font-size_sm
+  font-weight --font-weight_xs
+  line-height --line-height_xs
+  text-decoration none
+  color --text-color-primary
+  cursor pointer
+  transition color --transition-time_slow linear
+  @media (hover: none)
+    cursor none
+
+  &:focus
+    outline 2px solid --color-focus-primary
+    outline-offset 1px
+    @media (hover: none)
+      outline none
+    @supports (selector:focus-visible)
+      outline none
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      outline 2px solid --color-focus-primary
+      outline-offset 1px
+
+if --link_css-effects == 'plain'
+  @import '_css-effects_plain'
+
+if --link_css-effects == 'underlined'
+  @import '_css-effects_underlined'

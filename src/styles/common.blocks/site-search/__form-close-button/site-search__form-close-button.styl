@@ -1,0 +1,11 @@
+.site-search__form-close-button
+  &:active
+    .icon__path
+      fill --text-color-primary
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+
+  &:active:not(:focus-visible)
+    .icon__path
+      @supports (selector:focus-visible)
+        fill --text-color-primary

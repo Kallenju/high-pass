@@ -1,0 +1,89 @@
+.site-search__input
+  margin-right 0.90rem
+  padding 0
+  border-bottom 1px solid --color-light-grey
+  max-width 100%
+  width 41.20rem
+  height 3.00rem
+  color --color-light-grey
+  caret-color --color-light-grey
+  @media screen and (max-width --breakpoint_sm)
+    width 100%
+
+  &::-moz-placeholder
+    color --color-light-grey
+    @media screen and (max-width --breakpoint_xs)
+      font-size --font-size_xs
+
+  &::placeholder
+    color --color-light-grey
+    @media screen and (max-width --breakpoint_xs)
+      font-size --font-size_xs
+
+  &:focus
+    outline none
+    background none
+    border-bottom 1px solid --color-focus-primary
+    @media (hover: none)
+      outline none
+      border-bottom 1px solid --color-light-grey
+      background none
+    @supports (selector:focus-visible)
+      outline none
+      border-bottom 1px solid --color-light-grey
+      background none
+    &::-moz-placeholder
+      color --color-light-grey
+      @media (hover: none)
+        color --color-light-grey
+      @supports (selector:focus-visible)
+        color --color-light-grey
+    &::placeholder
+      color --color-light-grey
+      @media (hover: none)
+        color --color-light-grey
+      @supports (selector:focus-visible)
+        color --color-light-grey
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      outline none
+      border-bottom 1px solid --color-focus-primary
+      background none
+      &::-moz-placeholder
+        color --color-light-grey
+      &::placeholder
+        color --color-light-grey
+
+  &:hover
+    outline none
+    background none
+    border-bottom 1px solid --color-focus-primary
+    @media (hover: none)
+      outline none
+      border-bottom 1px solid --color-light-grey
+      background none
+    &::-moz-placeholder
+      color --color-light-grey
+      @media (hover: none)
+        color --color-light-grey
+    &::placeholder
+      color --color-light-grey
+      @media (hover: none)
+        color --color-light-grey
+
+  &:active
+    outline none
+    border-bottom 1px solid --color-active-primary
+    color --color-light-grey
+    caret-color --color-light-grey
+    background none
+    &::-moz-placeholder
+      color --color-light-grey
+    &::placeholder
+      color --color-light-grey
+
+.site-search__form_hidden
+  &.site-search__input
+    margin-right 0
+    width 0

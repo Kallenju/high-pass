@@ -1,0 +1,6 @@
+d_mixin(breakpoint, property)
+  if breakpoint
+    @media screen and (max-width breakpoint)
+      display property !important
+  else
+    display property !important

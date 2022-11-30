@@ -1,0 +1,16 @@
+.past-works__title
+  margin-bottom 1.80rem
+  font-family --font-family-secondary, sans-serif
+  font-size --font-size_xl
+  font-weight --font-weight_lg
+  line-height --line-height_xs
+  font-style normal
+  color --text-color-secondary
+  @media screen and (max-width --breakpoint_md)
+    margin-bottom 2.50rem
+  @media screen and (max-width --breakpoint_sm)
+    margin-bottom 1.70rem
+    font-size "calc(%s - 0.20rem)" % --font-size_xl
+  @media screen and (max-width --breakpoint_xs)
+    margin-bottom 1.60rem
+    font-size --font-size_md

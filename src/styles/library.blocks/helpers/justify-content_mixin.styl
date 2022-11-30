@@ -1,0 +1,6 @@
+justify-content_mixin(breakpoint, property)
+  if breakpoint
+    @media screen and (max-width breakpoint)
+      justify-content property !important
+  else
+    justify-content property !important

@@ -1,0 +1,69 @@
+.tooltip__icon
+  .icon__path
+    fill #bcbcbc
+
+  &:focus
+    + .tooltip__tip
+      opacity 1.00
+      @media (hover: none)
+        opacity 0
+
+  &:hover:not(:focus)
+    + .tooltip__tip
+      opacity 1.00
+      @media (hover: none)
+        opacity 0
+    .icon__path
+      @media (hover: none)
+        fill #bcbcbc
+
+  &:active
+    + .tooltip__tip
+      opacity 1.00
+    .icon__path
+      fill --color-hover-primary
+      @supports (selector:focus-visible)
+        fill #bcbcbc
+
+  &:focus-visible
+    + .tooltip__tip
+      opacity 1.00
+
+  &:hover:not(:focus-visible)
+    + .tooltip__tip
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          opacity 1.00
+
+  &:active:not(:focus-visible)
+    + .tooltip__tip
+      @supports (selector:focus-visible)
+        opacity 1.00
+    .icon__path
+      @supports (selector:focus-visible)
+        fill --color-hover-primary
+
+
+.tooltip__icon_activejs
+  + .tooltip__tip
+    opacity 1.00
+
+  .icon__path
+    fill --color-hover-primary
+
+  &:hover:not(:focus)
+    + .tooltip__tip
+      opacity 1.00
+    .icon__path
+      fill --color-hover-primary
+
+  &:hover:not(:focus-visible)
+    + .tooltip__tip
+      @supports (selector:focus-visible)
+        opacity 1.00
+
+  &:hover:not(:focus-visible)
+    .icon__path
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          fill --color-hover-primary

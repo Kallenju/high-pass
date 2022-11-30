@@ -1,0 +1,41 @@
+.map__popover-close-button-path-circle
+  fill --color-middle-grey
+
+.map__popover-close-button
+  &:focus
+    .map__popover-close-button-path-circle
+      fill --color-light-grey
+      @media (hover: none)
+        fill --color-middle-grey
+      @supports (selector:focus-visible)
+        fill --color-middle-grey
+
+  &:hover:not(:focus)
+    .map__popover-close-button-path-circle
+      fill --color-light-grey
+      @media (hover: none)
+        fill --color-middle-grey
+      @supports (selector:focus-visible)
+        fill --color-middle-grey
+
+  &:active
+    .map__popover-close-button-path-circle
+      fill --color-light-grey
+      @supports (selector:focus-visible)
+        fill --color-middle-grey
+
+  &:focus-visible
+    .map__popover-close-button-path-circle
+      @supports (selector:focus-visible)
+        fill --color-light-grey
+
+  &:hover:not(:focus-visible)
+    .map__popover-close-button-path-circle
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          fill --color-light-grey
+
+  &:active:not(:focus-visible)
+    .map__popover-close-button-path-circle
+      @supports (selector:focus-visible)
+        fill --color-light-grey

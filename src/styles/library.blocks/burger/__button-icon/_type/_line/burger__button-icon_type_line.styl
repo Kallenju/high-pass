@@ -1,0 +1,96 @@
+.burger__button-icon_type_line_type_line
+  margin-bottom 0.70rem
+  width 3.00rem
+  height 0.30rem
+  background-color --text-color-primary
+
+  &:last-child
+    margin-bottom 0
+
+.burger__button
+  &:active
+    .burger__button-icon_type_line
+      background-color --color-active-primary
+      transition width --transition-time_fast ease-out, background-color --transition-time_fast ease-out, transform --transition-time_fast ease-out
+      @supports (selector:focus-visible)
+        background-color --text-color-primary
+    .burger__button-icon_type_line:nth-child(2)
+      width 2.50rem
+      @supports (selector:focus-visible)
+        width 3.00rem
+    .burger__button-icon_type_line:nth-child(3)
+      width 1.80rem
+      @supports (selector:focus-visible)
+        width 3.00rem
+
+  &:active:not(:focus-visible)
+    .burger__button-icon_type_line
+      background-color --color-active-primary
+      transition width --transition-time_fast ease-out, background-color --transition-time_fast ease-out, transform --transition-time_fast ease-out
+    .burger__button-icon_type_line:nth-child(2)
+      width 2.50rem
+    .burger__button-icon_type_line:nth-child(3)
+      width 1.80rem
+
+.burger__button_activejs
+  .burger__button-icon_type_line
+    margin-bottom 0
+    background-color --text-color-primary
+    transition width --transition-time_fast ease-out, background-color --transition-time_fast ease-out, transform --transition-time_fast ease-out
+
+  .burger__button-icon_type_line:nth-child(1)
+    transform rotate(45deg)
+    transform-origin bottom left
+
+  .burger__button-icon_type_line:nth-child(2)
+    width 0
+    height 0
+
+  .burger__button-icon_type_line:nth-child(3)
+    width 3.00rem
+    transform translateY(1.90rem) rotate(-45deg)
+    transform-origin top left
+
+  &:active
+    .burger__button-icon_type_line
+      margin-bottom 0
+      background-color --text-color-primary
+      @supports (selector:focus-visible)
+        margin-bottom 0
+        background-color --text-color-primary
+    .burger__button-icon_type_line:nth-child(1)
+      transform rotate(45deg)
+      transform-origin bottom left
+      @supports (selector:focus-visible)
+        transform rotate(0)
+    .burger__button-icon_type_line:nth-child(2)
+      width 0
+      height 0
+      @supports (selector:focus-visible)
+        width 3.00rem
+        height 0.30rem
+    .burger__button-icon_type_line:nth-child(3)
+      width 3.00rem
+      transform translateY(1.90rem) rotate(-45deg)
+      transform-origin top left
+      @supports (selector:focus-visible)
+        transform translateY(0) rotate(0)
+
+  &:active:not(:focus-visible)
+    .burger__button-icon_type_line
+      @supports (selector:focus-visible)
+        margin-bottom 0
+        background-color --text-color-primary
+    .burger__button-icon_type_line:nth-child(1)
+      @supports (selector:focus-visible)
+        transform rotate(45deg)
+        transform-origin bottom left
+    .burger__button-icon_type_line:nth-child(2)
+      @supports (selector:focus-visible)
+        width 0
+        height 0
+    .burger__button-icon_type_line:nth-child(3)
+      @supports (selector:focus-visible)
+        width 3.00rem
+        transform translateY(1.90rem) rotate(-45deg)
+        transform-origin top left

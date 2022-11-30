@@ -1,0 +1,33 @@
+.map__popover-close-button
+  position absolute
+  top 2.00rem
+  right 2.00rem
+  width auto
+  height auto
+  &:focus
+      outline none
+      @media (hover: none)
+        outline none
+      @supports (selector:focus-visible)
+        outline none
+
+  &:hover:not(:focus)
+      outline none
+      @media (hover: none)
+        outline none
+      @supports (selector:focus-visible)
+        outline none
+
+  &:active
+      outline none
+      @supports (selector:focus-visible)
+        outline none
+
+  &:hover:not(:focus-visible)
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          outline none
+
+  &:active:not(:focus-visible)
+      @supports (selector:focus-visible)
+        outline none

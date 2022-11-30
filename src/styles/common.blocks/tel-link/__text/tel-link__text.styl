@@ -1,0 +1,45 @@
+.tel-link__text
+  font-family --font-family-secondary, sans-serif
+  font-size --font-size_sm
+  font-weight --font-weight_xs
+  line-height --line-height_md
+  color --brend-color
+  transition color --transition-time_slow linear
+  @media screen and (max-width --breakpoint_xs)
+    font-size --font-size_xs
+
+.tel-link
+  &:focus
+    .tel-link__text
+      color --text-color-primary
+      @media (hover: none)
+        color --brend-color
+      @supports (selector:focus-visible)
+        color --brend-color
+
+  &:hover:not(:focus)
+    .tel-link__text
+      color --color-hover-primary
+      @media (hover: none)
+        color --text-color-primary
+      @supports (selector:focus-visible)
+        color --text-color-primary
+
+  &:active
+    .tel-link__text
+      color --color-active-primary
+      transition color --transition-time_fast ease-out
+      @supports (selector:focus-visible)
+        color --text-color-primary
+
+  &:hover:not(:focus-visible)
+    .tel-link__text
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          color --color-hover-primary
+
+  &:active:not(:focus-visible)
+    .tel-link__text
+      @supports (selector:focus-visible)
+        color --color-primary-active
+        transition color --transition-time_fast ease-out

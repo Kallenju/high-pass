@@ -1,0 +1,49 @@
+.button_theme_wb
+  padding 1.90rem 3.70rem
+  border 1px solid --text-color-primary
+  font-weight --font-weight_xs
+  color --text-color-primary
+  background none
+
+  &:focus
+    color --color-white
+    background-color --color-middle-grey
+    @media (hover: none)
+      color --text-color-primary
+      background none
+    @supports (selector:focus-visible)
+      color --text-color-primary
+      background none
+
+  &:hover:not(:focus)
+    color --color-white
+    background-color --color-middle-grey
+    @media (hover: none)
+      color --text-color-primary
+      background none
+    @supports (selector:focus-visible)
+      color --text-color-primary
+      background none
+
+  &:active
+    color --color-white
+    background-color --color-black
+    @supports (selector:focus-visible)
+      color --text-color-primary
+      background none
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      color --color-white
+      background-color --color-middle-grey
+
+  &:hover:not(:focus-visible)
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        color --color-white
+        background-color --color-middle-grey
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      color --color-white
+      background-color --color-black

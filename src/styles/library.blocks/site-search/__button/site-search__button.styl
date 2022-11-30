@@ -1,0 +1,25 @@
+.site-search__button
+  &:hover:not(:focus)
+    .icon__path
+      fill --color-white
+      @media (hover: none)
+        fill --color-white
+      @supports (selector:focus-visible)
+        fill --color-white
+
+  &:active
+    .icon__path
+      fill --color-white
+      @supports (selector:focus-visible)
+        fill --color-white
+
+  &:hover:not(:focus-visible)
+    .icon__path
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+            fill --color-white
+
+  &:active:not(:focus-visible)
+    .icon__path
+      @supports (selector:focus-visible)
+        fill --color-white

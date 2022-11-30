@@ -1,0 +1,24 @@
+.input_view_invalid
+  outline 1px solid --warning-color-primary !important
+
+  &:focus
+    outline 1px solid --warning-color-primary !important
+    @media (hover: none)
+      outline 1px solid --warning-color-primary !important
+    @supports (selector:focus-visible)
+      outline 1px solid --warning-color-primary !important
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      outline 1px solid --warning-color-primary !important
+
+  &:hover
+    outline 1px solid --warning-color-primary !important
+    @media (hover: none)
+      outline 1px solid --warning-color-primary !important
+
+  &:not(:placeholder-shown)
+    outline 1px solid --warning-color-primary !important
+
+  &:active
+    outline 1px solid --warning-color-primary !important

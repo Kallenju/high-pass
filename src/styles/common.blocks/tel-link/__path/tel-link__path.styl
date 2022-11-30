@@ -1,0 +1,39 @@
+.tel-link__path
+  fill --brend-color
+  transition fill --transition-time_slow linear
+
+.tel-link
+  &:focus
+    .tel-link__path
+      fill --text-color-primary
+      @media (hover: none)
+        fill --brend-color
+      @supports (selector:focus-visible)
+        fill --brend-color
+
+  &:hover:not(:focus)
+    .tel-link__path
+      fill --color-hover-primary
+      @media (hover: none)
+        fill --text-color-primary
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+
+  &:active
+    .tel-link__path
+      fill --color-active-primary
+      transition fill --transition-time_fast ease-out
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+
+  &:hover:not(:focus-visible)
+    .tel-link__path
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+            fill --color-hover-primary
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      .tel-link__path
+        fill --color-active-primary
+        transition fill --transition-time_fast ease-out

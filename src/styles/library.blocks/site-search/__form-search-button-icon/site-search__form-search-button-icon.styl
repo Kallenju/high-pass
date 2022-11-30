@@ -1,0 +1,30 @@
+.site-search__form-search-button-icon
+  width 2.40rem
+  height 2.40rem
+  transition width --transition-time_slow linear, height --transition-time_slow linear
+
+  .icon__path
+    fill --color-primary-active
+
+  &:hover:not(:focus)
+    .icon__path
+      fill --color-primary-active
+      @media (hover: none)
+        fill --text-color-primary
+
+  &:active
+    .icon__path
+      fill --color-primary-active
+      @supports (selector:focus-visible)
+        fill --text-color-primary
+
+  &:hover:not(:focus-visible)
+    .icon__path
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          fill --color-primary-active
+
+  &:active:not(:focus-visible)
+    .icon__path
+      @supports (selector:focus-visible)
+        fill --color-primary-active

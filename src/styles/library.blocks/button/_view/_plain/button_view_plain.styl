@@ -1,0 +1,91 @@
+.button_view_plain
+  padding 0
+  font-size --font-size_md
+  font-weight --font-weight_xs
+  line-height --line-height_sm
+  color --text-color-primary
+  background none
+
+  &:focus
+    outline 2px solid --color-hover-primary
+    outline-offset 1px
+    background none
+    @media (hover: none)
+      outline none
+      background none
+    @supports (selector:focus-visible)
+      outline none
+      background none
+
+  &:hover:not(:focus)
+    outline none
+    color --color-hover-primary
+    background none
+    @media (hover: none)
+      outline none
+      color --text-color-primary
+      background none
+    @supports (selector:focus-visible)
+      outline none
+      color --text-color-primary
+      background none
+
+  &:active
+    outline none
+    color --color-active-primary
+    background none
+  @supports (selector:focus-visible)
+    outline none
+    color --text-color-primary
+    background none
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      outline 2px solid --color-hover-primary
+      outline-offset 1px
+      background none
+
+  &:hover:not(:focus-visible)
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        outline none
+        color --color-hover-primary
+        background none
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      outline none
+      color --color-active-primary
+      background none
+
+.button_activejs
+  &.button_view_plain
+    color --color-active-primary
+    background none
+
+  &:hover:not(:focus)
+    &.button_view_plain
+      outline none
+      color --color-active-primary
+      background none
+
+  &:active
+    &.button_view_plain
+      outline none
+      color --color-active-primary
+      background none
+
+  &:hover:not(:focus-visible)
+    &.button_view_plain
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          outline none
+          color --color-active-primary
+          background none
+
+  &:active:not(:focus-visible)
+    &.button_view_plain
+      @supports (selector:focus-visible)
+        outline none
+        color --color-active-primary
+        background none

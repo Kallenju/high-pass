@@ -1,0 +1,62 @@
+.burger__button
+  position relative
+  display inline-flex
+  flex-direction column
+  align-items flex-start
+  padding 0
+  outline none
+  border none
+  font-size 0
+  text-decoration none
+  background none
+  cursor pointer
+  @media (hover: none)
+    cursor none
+
+  &::after
+    content ''
+    position absolute
+    top -10px
+    right -10px
+    bottom -10px
+    left -10px
+
+  &:focus
+    outline 2px solid --color-hover-primary
+    outline-offset 1px
+    @media (hover: none)
+      outline none
+    @supports (selector:focus-visible)
+      outline none
+
+  &:hover:not(:focus)
+    outline none
+    @media (hover: none)
+      outline none
+    @supports (selector:focus-visible)
+      outline none
+
+  &:active
+    outline none
+    @supports (selector:focus-visible)
+      outline none
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      outline 2px solid --color-hover-primary
+      outline-offset 1px
+
+  &:hover:not(:focus-visible)
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        outline none
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      outline none
+
+.burger__button
+  &.burger__button_activejs
+    position absolute
+    top 1.20rem
+    left 1.85rem

@@ -1,0 +1,22 @@
+.link
+  &:focus
+  outline none
+  background-color  --color-hover-primary
+  @media (hover: none)
+    outline none
+    background none
+  @supports (selector:focus-visible)
+    outline none
+    background none
+
+  &:hover:not(:focus)
+    color --color-focus-primary
+  @media (hover: none)
+    color --text-color-primary
+  @supports (selector:focus-visible)
+    color --text-color-primary
+
+  &:hover:not(:focus-visible)
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        color --color-focus-primary

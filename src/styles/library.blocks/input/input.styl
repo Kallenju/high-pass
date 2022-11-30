@@ -1,0 +1,75 @@
+.input
+  overflow hidden
+  padding 1.40rem 2.40rem
+  border none
+  outline none
+  resize none
+  width 100%
+  height 6.00rem
+  font-family --font-family-primary, sans-serif
+  font-size --font-size_sm
+  font-weight --font-weight_xs
+  line-height --line-height_xl
+  font-style normal
+  color --form-text-color-primary
+  caret-color --form-text-color-primary
+  background-color --background-color-secondary
+  transition width --transition-time_slow linear, color --transition-time_slow linear, caret-color --transition-time_slow linear, background-color --transition-time_slow linear
+
+  &::-moz-placeholder
+    font-family --font-family-primary, sans-serif
+    font-size --font-size_sm
+    font-weight --font-weight_xs
+    line-height --line-height_xl
+    font-style normal
+    color --form-text-color-primary
+    transition color --transition-time_slow linear
+
+  &::placeholder
+    font-family --font-family-primary, sans-serif
+    font-size --font-size_sm
+    font-weight --font-weight_xs
+    line-height --line-height_xl
+    font-style normal
+    color --form-text-color-primary
+    transition color --transition-time_slow linear
+
+  &:focus
+    background-color --color-middle-grey
+    @media (hover: none)
+      background-color --background-color-secondary
+    @supports (selector:focus-visible)
+      background-color --background-color-secondary
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      background-color --color-middle-grey
+
+  &:hover
+    background-color --color-middle-grey
+    @media (hover: none)
+      background-color --background-color-secondary
+    &::-moz-placeholder
+      color --color-hover-primary
+      @media (hover: none)
+        color --form-text-color-primary
+    &::placeholder
+      color --color-hover-primary
+      @media (hover: none)
+        color --form-text-color-primary
+
+  &:not(:placeholder-shown)
+    color --text-color-primary
+    caret-color --text-color-primary
+    background-color --color-middle-grey
+    transition color --transition-time_fast ease-out, caret-color --transition-time_fast ease-out, background-color --transition-time_fast ease-out
+
+  &:active
+    color --text-color-primary
+    caret-color --text-color-primary
+    background-color --color-middle-grey
+    transition color --transition-time_fast ease-out, caret-color --transition-time_fast ease-out, background-color --transition-time_fast ease-out
+    &::-moz-placeholder
+      color --text-color-primary
+    &::placeholder
+      color --text-color-primary

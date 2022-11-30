@@ -1,0 +1,6 @@
+text-align_mixin(breakpoint, property)
+  if breakpoint
+    @media screen and (max-width breakpoint)
+      text-align property !important
+  else
+    text-align property !important

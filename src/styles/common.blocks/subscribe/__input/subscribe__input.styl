@@ -1,0 +1,69 @@
+.subscribe__input
+  padding 1.50rem 2.30rem
+  outline none
+  height 5.00rem
+  line-height --line-height_xs
+  font-style normal
+  color --text-color-primary
+  caret-color --text-color-primary
+  background-color #4a4a4a
+  @media screen and (max-width --breakpoint_xs)
+    padding 1.20rem 2.30rem
+    height 4.00rem
+    font-size --font-size_xs
+
+  &::-moz-placeholder
+    line-height --line-height_xs
+    color #cacaca
+    @media screen and (max-width --breakpoint_xs)
+      font-size --font-size_xs
+
+  &::placeholder
+    line-height --line-height_xs
+    color #cacaca
+    @media screen and (max-width --breakpoint_xs)
+      font-size --font-size_xs
+
+  &:focus
+    background-color #4a4a4a
+    @media (hover: none)
+      background-color #4a4a4a
+    @supports (selector:focus-visible)
+      background-color #4a4a4a
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      background-color #4a4a4a
+
+  &:hover
+    background-color #4a4a4a
+    @media (hover: none)
+      background-color #4a4a4a
+    &::-moz-placeholder
+      color --color-hover-primary
+      @media (hover: none)
+        color #cacaca
+    &::placeholder
+      color --color-hover-primary
+      @media (hover: none)
+        color #cacaca
+
+  &:not(:placeholder-shown)
+    color --text-color-primary
+    caret-color --text-color-primary
+    background-color #4a4a4a
+    transition color --transition-time_fast ease-out, caret-color --transition-time_fast ease-out, background-color --transition-time_fast ease-out
+
+  &:active
+    color --text-color-primary
+    caret-color --text-color-primary
+    background-color #4a4a4a
+    transition color --transition-time_fast ease-out, caret-color --transition-time_fast ease-out, background-color --transition-time_fast ease-out
+    &::-moz-placeholder
+      color --text-color-primary
+      @media (hover: none)
+        color --text-color-primary
+    &::placeholder
+      color --text-color-primary
+      @media (hover: none)
+        color --text-color-primary

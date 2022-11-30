@@ -1,0 +1,62 @@
+.button
+  position relative
+  display inline-flex
+  align-items center
+  padding 1.25rem 1.90rem
+  border 3px solid --border-color-primary
+  outline none
+  text-align center
+  font-family --font-family-primary, sans-serif
+  font-size --font-size_sm
+  font-weight --font-weight_lg
+  line-height --line-height_sm
+  font-style normal
+  text-decoration none
+  color --color-white
+  background-color --background-color-primary
+  cursor pointer
+  transition margin --transition-time_slow linear, padding --transition-time_slow linear, color --transition-time_slow linear, background-color --transition-time_slow linear, border-color --transition-time_slow linear, opacity --transition-time_slow linear
+  @media (hover: none)
+    cursor none
+
+  &:focus
+    border-color --border-color-secondary
+    @media (hover: none)
+      border-color --border-color-primary
+    @supports (selector:focus-visible)
+      border-color --border-color-primary
+
+  &:hover:not(:focus)
+    border-color --color-hover-primary
+    background-color --color-hover-primary
+    @media (hover: none)
+      border-color --border-color-primary
+      background-color --background-color-primary
+    @supports (selector:focus-visible)
+      border-color --border-color-primary
+      background-color --background-color-primary
+
+  &:active
+    border-color --color-active-primary
+    background-color --color-active-primary
+    transition color --transition-time_fast ease-out, background-color --transition-time_fast ease-out, border-color --transition-time_fast ease-out
+    @supports (selector:focus-visible)
+      border-color --border-color-primary
+      background-color: --background-color-primary
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      border-color --border-color-secondary
+      background-color: --color-hover-primary
+
+  &:hover:not(:focus-visible)
+    @supports (selector:focus-visible)
+      @media (hover: hover)
+        border-color --color-hover-primary
+        background-color --color-hover-primary
+
+  &:active:not(:focus-visible)
+    @supports (selector:focus-visible)
+      border-color --color-active-primary
+      background-color --color-active-primary
+      transition: color --transition-time_fast ease-out, background-color --transition-time_fast ease-out, border-color --transition-time_fast ease-out

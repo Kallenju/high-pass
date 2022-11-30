@@ -1,0 +1,6 @@
+grid__item_order_mixin(n, breakpoint)
+  if breakpoint
+    @media screen and (max-width: breakpoint)
+      order: n;
+  else
+    order: n;

@@ -1,0 +1,27 @@
+.cases__card-hashtag
+  position absolute
+  top 0.70rem
+  right 0.70rem
+  display inline-flex
+  justify-content center
+  align-items center
+  padding 0.60rem 1.40rem
+  outline none
+  font-family --font-family-primary, sans-serif
+  font-size --font-size_xs
+  font-weight --font-weight_xs
+  line-height --line-height_sm
+  text-decoration none
+  color --text-color-primary
+  background-color --color-dark-grey
+  cursor pointer
+  transition color --transition-time_slow linear
+  @media (hover: none)
+    cursor none
+  @media screen and (max-width --breakpoint_md)
+    top 0.90rem
+  @media screen and (max-width --breakpoint_xs)
+    top 0.50rem
+    right 0.50rem
+    padding 0.40rem 1.40rem
+    font-size --font-size_xxs

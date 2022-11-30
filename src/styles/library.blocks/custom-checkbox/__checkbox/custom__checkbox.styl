@@ -1,0 +1,31 @@
+.custom-checkbox__checkbox
+  position absolute
+  opacity 0
+  cursor pointer
+  height 0
+  width 0
+
+  &:focus
+    ~ .custom-checkbox__checkmark
+      border 1px solid --border-color-primary
+      transition border --transition-time_fast ease-out
+    @media (hover: none)
+      ~ .custom-checkbox__checkmark
+        border 1px solid --color-grey-light
+    @supports (selector:focus-visible)
+      ~ .custom-checkbox__checkmark
+        border 1px solid --color-grey-light
+
+  &:focus-visible
+    @supports (selector:focus-visible)
+      ~ .custom-checkbox__checkmark
+        border 1px solid --border-color-primary
+        transition border --transition-time_fast ease-out
+
+  &:checked
+    ~ .custom-checkbox__checkmark
+      border 1px solid --border-color-primary
+      transition border --transition-time_fast ease-out
+    ~ .custom-checkbox__checkmark::after
+      opacity 1.00
+      transition opacity --transition-time_fast ease-out

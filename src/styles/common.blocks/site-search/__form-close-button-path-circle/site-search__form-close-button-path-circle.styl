@@ -1,0 +1,41 @@
+.site-search__form-close-button-path-circle
+  fill --color-middle-grey
+
+.site-search__form-close-button
+  &:focus
+    .site-search__form-close-button-path-circle
+      fill --color-light-grey
+      @media (hover: none)
+        fill --color-middle-grey
+      @supports (selector:focus-visible)
+        fill --color-middle-grey
+
+  &:hover:not(:focus)
+    .site-search__form-close-button-path-circle
+      fill --color-light-grey
+      @media (hover: none)
+        fill --color-middle-grey
+      @supports (selector:focus-visible)
+        fill --color-middle-grey
+
+  &:active
+    .site-search__form-close-button-path-circle
+      fill --color-light-grey
+      @supports (selector:focus-visible)
+        fill --color-middle-grey
+
+  &:focus-visible
+    .site-search__form-close-button-path-circle
+      @supports (selector:focus-visible)
+        fill --color-light-grey
+
+  &:hover:not(:focus-visible)
+    .site-search__form-close-button-path-circle
+      @supports (selector:focus-visible)
+        @media (hover: hover)
+          fill --color-light-grey
+
+  &:active:not(:focus-visible)
+    .site-search__form-close-button-path-circle
+      @supports (selector:focus-visible)
+        fill --color-light-grey
