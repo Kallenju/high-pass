@@ -1,0 +1,1 @@
+const defaults={popoverBodyCloseButton:{selectors:".popover__button",addActiveClass:!1,activeClass:"popover__button_activejs"},body:{selectors:".popover__body",hiddenClass:"popover_hidden"}};export{defaults};
