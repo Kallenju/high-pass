@@ -57,7 +57,7 @@ const yandexMap = new YandexMap('.yandex-map', {
       options: {
         openBalloonOnClick: false,
         iconLayout: 'default#image',
-        iconImageHref: '/images/raster/icons/my-placemark.svg',
+        iconImageHref: './images/raster/icons/my-placemark.svg',
         iconImageSize: [12, 12],
       },
       onClick: mapPopover.openPopover.bind(mapPopover),
@@ -85,18 +85,16 @@ const EMAIL_REGEXP = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+")
 const NAME_REGEXP = /^[а-яА-Я]+?[а-яА-Я\s-]*$/;
 
 subscribeForm.use({ Validate });
-subscribeForm.validate
-  .addField('email', [
-    ruleRequired,
-    {
-      validator(elemValue) {
-        return elemValue.match(EMAIL_REGEXP);
-      },
-      errorMessage: 'Недопустимый формат',
+subscribeForm.validate.addField('email', [
+  ruleRequired,
+  {
+    validator(elemValue) {
+      return elemValue.match(EMAIL_REGEXP);
     },
-  ]);
-subscribeForm.validate
-  .onSuccess(() => subscribeForm.form.submit(), 'submit');
+    errorMessage: 'Недопустимый формат',
+  },
+]);
+subscribeForm.validate.onSuccess(() => subscribeForm.form.submit(), 'submit');
 
 requestForm.use({ Validate });
 requestForm.validate
@@ -118,5 +116,4 @@ requestForm.validate
       errorMessage: 'Недопустимый формат',
     },
   ]);
-requestForm.validate
-  .onSuccess(() => requestForm.form.submit(), 'submit');
+requestForm.validate.onSuccess(() => requestForm.form.submit(), 'submit');
